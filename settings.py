@@ -34,7 +34,7 @@ SESSION_CONFIG_DEFAULTS = dict(
     max_cons_timeout_pages=2,
     order='mobility_first',
     efficacy='high',
-    mobility='low',
+    mobility='high',
     prolific_completion_url="https://app.prolific.co/submissions/complete?cc=7F39861F",
     doc="<p><b>Study url:</b> After the given url add: ?participant_label"
         "={{%PROLIFIC_PID%}}&STUDY_ID={{%STUDY_ID%}}&SESSION_ID={{%SESSION_ID%}}"
@@ -42,20 +42,12 @@ SESSION_CONFIG_DEFAULTS = dict(
 
 ROOMS = [
     dict(
-        name='low_mobility_high_efficacy',
-        display_name='Room 1: low mobility high efficacy'
+        name='high_efficacy',
+        display_name='Room 1: High efficacy'
     ),
     dict(
-        name='low_mobility_low_efficacy',
-        display_name='Room 2: low mobility low efficacy'
-    ),
-    dict(
-        name='high_mobility_high_efficacy',
-        display_name='Room 3: high mobility high efficacy'
-    ),
-    dict(
-        name='high_mobility_low_efficacy',
-        display_name='Room 4: high mobility low efficacy'
+        name='low_efficacy',
+        display_name='Room 2: Low efficacy'
     ),
 ]
 
