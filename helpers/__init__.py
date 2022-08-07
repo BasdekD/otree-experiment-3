@@ -41,6 +41,19 @@ def dropout_handler_app_after_this_page(player, upcoming_apps):
         pass
 
 
+# Calculate the switching rounds
+def define_switching_rounds():
+    # Switching rounds:
+    # - First always
+    # - 5 random rounds from 2 to 10 (included)
+    # - Either 11 or 12
+    rounds_2_10 = random.sample(range(2, 11), 4)
+    rounds_2_10.sort()
+    return [1] + rounds_2_10 + random.sample((11, 12), 1)
+
+
+
+
 # Comprehension Question Handling
 def question_final_income_get_answer_index(player):
     return 2 if player.session.config['efficacy'] == 'high' else 4
