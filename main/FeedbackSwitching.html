@@ -17,18 +17,18 @@
         {{ if player.has_switched }}
             <b>You and another low-income member move to the high-income group</b> because the two of you <b>allocated more points than the other low-income members in your personal accounts.</b>
             <p>
-                Since you  moved to the high-income group <b>your income is {{ subsession.final_high_income }}.</b>
+                Thus, you receive the income of the <b>high-income group: {{ subsession.final_high_income }}.</b>
             </p>
         {{ else }}
             <b>You and another low-income member do not move to the high-income group</b> because the two other low-income members <b>allocated more points than you in their personal accounts. </b>
             <p>
-                Since you did not move to the high-income group <b>your income is {{ subsession.final_low_income }}.</b>
+                Thus, you receive the income of the <b>low-income group: {{ subsession.final_low_income }}.</b>
             </p>
         {{ endif }}
     {{ endif }}
     </p>
     <p>
-        <b>According to low-income members of previous sessions, the probability that a randomly selected round is a moving round is <span class="mobility">{{ if session.config.mobility == 'low' }}10%{{ else }} 50%{{ endif }}</span>.</b>
+        <b>According to low-income members of previous sessions, <span style="color: red;"><b>half of the rounds are moving rounds.</b></span>
     </p>
 </div>
 {{ next_button }}

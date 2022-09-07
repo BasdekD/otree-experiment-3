@@ -11,10 +11,10 @@
 
 {{ if session.config.order == 'mobility_first' }}
 <p><b>First way: </b>You can allocate your Action Points to <b>your personal account.</b><br/>
-<p>According to low-income members of previous sessions, <b>the probability that a randomly selected round is a <u>moving round is around<span class="mobility">{{ if session.config.mobility == 'low' }} 10%{{ else }} 50%{{ endif }}.</span></u></b>
+<p>According to low-income members of previous sessions, <span style="color: red;"><b>half of the rounds are moving rounds.</b></span>
 </p>
 
-If this is a moving round, the <b>two low-income members who allocate the most Action Points to their personal account will move to the high-income group.</b></p>
+If this is a moving round, the <b>two low-income members who allocate the most Action Points to their personal account will move to the high-income group and will receive a high income.</b></p>
 {{ endif }}
 
 <p><b>{{ if session.config.order == 'mobility_first' }}Second {{ else }} First {{ endif }} way:</b> You and the other three low-income members can contribute your Action Points to the <b>public pool</b> to achieve <b>income redistribution from the high-income group to the low-income group</b> in the following way:</p>
@@ -30,10 +30,10 @@ If this is a moving round, the <b>two low-income members who allocate the most A
 
 {{ if session.config.order != 'mobility_first' }}
 <p><b>Second way: </b>You can allocate your Action Points to <b>your personal account.</b><br/>
-<p>According to low-income members of previous sessions, <b>the probability that a randomly selected round is a <u>moving round is around<span class="mobility">{{ if session.config.mobility == 'low' }} 10%{{ else }} 50%{{ endif }}.</span></u></b>
+<p>According to low-income members of previous sessions, <span style="color: red;"><b>half of the rounds are moving rounds.</b></span>
 </p>
 If this is a moving round, the <b>two low-income members who allocate the most Action Points to their personal
-    account will move to the high-income group.</b></p>
+    account will move to the high-income group and will receive a high income.</b></p>
 {{ endif }}
 
 <p><b>Third way:</b> You exchange your Action Points for money. <b>For each Action Point you exchange, you earn £{{ session.config.ap_to_money_cu }}.</b></p>
