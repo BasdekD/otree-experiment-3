@@ -7,28 +7,31 @@
 <link rel="stylesheet" href="{{ static 'global/style.css' }}" />
 
 <div style="text-align: justify;">
-    <p>You allocated <b>{{player.personal_account_ap}} Action Points</b> to your personal account.</p>
     <p>
+        You allocated <b>{{player.personal_account_ap}} Action Points</b> to your personal account.
+    </p>
     {{ if not is_current_round_switching }}
-        This round is <b>not a moving round.</b></br>
-        <b>No low-income member</b> moves to the high-income group and thus, <b>your income is {{ subsession.final_low_income }}.</b>     
+        This round is <b>not a moving round.</b>
+        <p>
+            <b>No low-income member</b> moves to the high-income group and thus, <b>your income is {{ subsession.final_low_income }}.</b> 
+         </p>    
     {{ else }}
         This round is a moving round.</br> 
         {{ if player.has_switched }}
-            <b>You and another low-income member move to the high-income group</b> because the two of you <b>allocated more points than the other low-income members in your personal accounts.</b>
-            <p>
-                Thus, you receive the income of the <b>high-income group: {{ subsession.final_high_income }}.</b>
-            </p>
+        <p>
+            You and another low-income member <b>move</b> to the high-income group and you receive a <b>high income: {{ subsession.final_high_income }}.</b>
+        </p>
         {{ else }}
-            <b>You and another low-income member do not move to the high-income group</b> because the two other low-income members <b>allocated more points than you in their personal accounts. </b>
-            <p>
-                Thus, you receive the income of the <b>low-income group: {{ subsession.final_low_income }}.</b>
-            </p>
+        <p>
+            You and another low-income member <b>do not move</b> to the high-income group and you receive a <b>low income: {{ subsession.final_low_income }}.</b>
+        </p>
         {{ endif }}
     {{ endif }}
+    <p>
+        <b>According to low-income members of previous sessions, <span style="color: red;">half of the rounds are moving rounds.</span></b>
     </p>
     <p>
-        <b>According to low-income members of previous sessions, <span style="color: red;"><b>half of the rounds are moving rounds.</b></span>
+        By allocating many points in your personal account in each round, <b>you can earn a high income in half of the rounds.</b>
     </p>
 </div>
 {{ next_button }}
